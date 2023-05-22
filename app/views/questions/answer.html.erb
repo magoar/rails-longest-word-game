@@ -1,0 +1,14 @@
+<div class="container" style="width: 500px">
+<h1>Result</h1>
+
+<figure class="yellow-background">
+  <blockquote class="blockquote">
+    <p><%= @score %></p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    your word <%= params[:word] %>
+  </figcaption>
+</figure>
+
+<%= link_to "Play again", ask_path %>
+</div>

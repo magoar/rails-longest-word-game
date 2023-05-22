@@ -1,0 +1,19 @@
+<div class="container" style="width: 500px">
+<h1>Longest Word Game</h1>
+  <ul class="list-inline">
+    <% @letters.each do |letter| %>
+      <li class="badge bg-primary list-inline-item"><%= letter %></li>
+    <% end %>
+  </ul>
+
+
+  <form action="/answer" data-turbo="false" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+   <%= hidden_field_tag :letters, @letters %>
+      <label for="word" class="form-label" >Enter a word:</label>
+    <div class="input-group mb-3">
+      <input type="text" id="word" class="form-control" name="word">
+      <input type="submit"  class="btn btn-primary" value="submit">
+    </div>
+  </form>
+  </div>
